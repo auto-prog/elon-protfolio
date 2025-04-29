@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-pt-20">  <head>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elon Musk - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d', // Kept your custom color definition
+              }
+            }
+          }
+        }
+      </script>
+    </head>
+<body class="bg-gray-50 text-gray-800">  <header class="flex justify-center z-50"> <nav class="bg-yellow-300 py-3 px-4 fixed top-0 flex w-1/2 justify-between md:justify-evenly rounded-b-2xl shadow-md">
+        <a href="#home" aria-label="Home"><button class="p-1 hover:bg-yellow-400 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg></button></a>
+        <a href="#about" aria-label="About"><button class="p-1 hover:bg-yellow-400 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M160-120q-33 0-56.5-23.5T80-200v-440q0-33 23.5-56.5T160-720h160v-80q0-33 23.5-56.5T400-880h160q33 0 56.5 23.5T640-800v80h160q33 0 56.5 23.5T880-640v440q0 33-23.5 56.5T800-120H160Zm0-80h640v-440H160v440Zm240-520h160v-80H400v80ZM160-200v-440 440Z"/></svg></button></a>
+        <a href="#portfolio" aria-label="Portfolio"><button class="p-1 hover:bg-yellow-400 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M42-120v-112q0-33 17-62t47-44q51-26 115-44t141-18q77 0 141 18t115 44q30 15 47 44t17 62v112H42Zm80-80h480v-32q0-11-5.5-20T582-266q-36-18-92.5-36T362-320q-71 0-127.5 18T142-266q-9 5-14.5 14t-5.5 20v32Zm240-240q-66 0-113-47t-47-113h-10q-9 0-14.5-5.5T172-620q0-9 5.5-14.5T192-640h10q0-45 22-81t58-57v38q0 9 5.5 14.5T302-720q9 0 14.5-5.5T322-740v-54q9-3 19-4.5t21-1.5q11 0 21 1.5t19 4.5v54q0 9 5.5 14.5T422-720q9 0 14.5-5.5T442-740v-38q36 21 58 57t22 81h10q9 0 14.5 5.5T552-620q0 9-5.5 14.5T532-600h-10q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T442-600H282q0 33 23.5 56.5T362-520Zm300 160-6-30q-6-2-11.5-4.5T634-402l-28 10-20-36 22-20v-24l-22-20 20-36 28 10q4-4 10-7t12-5l6-30h40l6 30q6 2 12 5t10 7l28-10 20 36-22 20v24l22 20-20 36-28-10q-5 5-10.5 7.5T708-390l-6 30h-40Zm20-70q12 0 21-9t9-21q0-12-9-21t-21-9q-12 0-21 9t-9 21q0 12 9 21t21 9Zm72-130-8-42q-9-3-16.5-7.5T716-620l-42 14-28-48 34-30q-2-5-2-8v-16q0-3 2-8l-34-30 28-48 42 14q6-6 13.5-10.5T746-798l8-42h56l8 42q9 3 16.5 7.5T848-780l42-14 28 48-34 30q2 5 2 8v16q0 3-2 8l34 30-28 48-42-14q-6 6-13.5 10.5T818-602l-8 42h-56Zm28-90q21 0 35.5-14.5T832-700q0-21-14.5-35.5T782-750q-21 0-35.5 14.5T732-700q0 21 14.5 35.5T782-650ZM362-200Z"/></svg></button></a>
+        <a href="#testimonial" aria-label="Testimonials"><button class="p-1 hover:bg-yellow-400 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m363-390 117-71 117 71-31-133 104-90-137-11-53-126-53 126-137 11 104 90-31 133ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z"/></svg></button></a>
+        <a href="#CONTACT" aria-label="Contact"><button class="p-1 hover:bg-yellow-400 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg></button></a>
+    </nav>
+  </header>
+
+  <main> <section id="home" class="grid grid-cols-1 md:grid-cols-2 min-h-screen">
+        <div class="bg-slate-800 text-white flex justify-center items-center order-2 md:order-1">
+            <div class="p-8 md:p-12 lg:p-16 flex flex-col gap-6 md:gap-8">
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-light">HI I AM <br class="md:hidden"> <span class="font-serif text-5xl sm:text-6xl lg:text-7xl bg-yellow-300 text-black rounded-3xl p-2 sm:p-3 lg:p-4 inline-block mt-2"> ELON</span></h1>
+                <p class="text-base lg:text-lg">I build rockets with SpaceX, electric cars with Tesla, and brain–machine interfaces with Neuralink. I dig tunnels with The Boring Company and mess with social media at X. My goal? Accelerate the future — sustainable energy, AI, and making life multiplanetary. That’s it</p>
+               <a href="#about"><button  class="bg-yellow-400 rounded-2xl text-black p-2 px-4 self-start font-mono font-medium text-lg hover:bg-yellow-500 transition duration-200">LEARN ABOUT ME</button></a>
+            </div>
+        </div>
+        <div class="w-full h-64 md:h-screen bg-black flex items-center justify-center order-1 md:order-2 overflow-hidden">
+            <img class="w-full h-full object-cover" src="https://i.pinimg.com/736x/e6/b9/88/e6b988bb53b7d8310df67b17557cf49b.jpg" alt="Elon Musk Portrait"> </div>
+    </section>
+
+    <section id="about" class="py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
+      <div class="container mx-auto">
+        <div class="p-6 md:p-10 flex justify-center mb-10 md:mb-16">
+            <div class="border-2 p-6 md:p-10 border-black border-dotted">
+                <h1 class="text-4xl sm:text-6xl lg:text-8xl font-bold text-center">ABOUT ME</h1>
+            </div>
+        </div>
+        <p class="text-center max-w-3xl mx-auto mb-12 lg:mb-16 text-lg">Elon Musk is a visionary entrepreneur, engineer, and industrial designer known for founding and leading multiple groundbreaking companies. He is the CEO and lead designer of SpaceX, CEO and product architect of Tesla, Inc., founder of Neuralink and The Boring Company, and owner of X (formerly Twitter). Musk’s work spans space exploration, electric vehicles, artificial intelligence, brain–computer interfaces, and infrastructure innovation. Driven by an ambitious mission to "make life multiplanetary" and accelerate humanity’s transition to sustainable energy, Musk is widely recognized as one of the most influential figures in tech and innovation.</p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-8 items-start">
+            <div class="lg:col-span-3 bg-black text-white rounded-lg p-6 sm:p-8">
+                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 text-center">
+                     <div> <h2 class="text-4xl sm:text-5xl lg:text-6xl font-semibold mb-2 text-yellow-300">219M+</h2> <p class="font-medium">Followers on X</p>
+                     </div>
+                     <div>
+                         <h2 class="text-4xl sm:text-5xl lg:text-6xl font-semibold mb-2 text-yellow-300">$200B+</h2> <p class="font-medium">Approx. Net Worth</p>
+                     </div>
+                     <div class="sm:border-t sm:border-gray-700 sm:pt-8"> <h2 class="text-4xl sm:text-5xl lg:text-6xl font-semibold mb-2 text-yellow-300">6+</h2>
+                         <p class="font-medium">Major Companies</p>
+                     </div>
+                     <div class="sm:border-t sm:border-gray-700 sm:pt-8"> <h2 class="text-4xl sm:text-5xl lg:text-6xl font-semibold mb-2 text-yellow-300">5M+</h2> <p class="font-medium">Tesla Cars Sold</p>
+                     </div>
+                 </div>
+            </div>
+            <div class="lg:col-span-2 p-6"> <h2 class="text-2xl lg:text-3xl font-bold mb-4">WHAT I DO?</h2>
+                <h3 class="text-xl font-semibold pt-4 mb-2">TESLA</h3> <p class="text-base">Tesla isn't just a car company — it’s a clean energy ecosystem. Founded in 2003 (Musk joined shortly after), Tesla revolutionized the auto industry by proving electric cars could be fast, sexy, and better than gas cars. Under Musk's leadership...</p>
+                </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="my-12 border-gray-300">
+
+    <section id="portfolio" class="py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
+        <div class="container mx-auto">
+            <div class="p-6 md:p-10 flex justify-center mb-10 md:mb-16">
+                <div class="border-2 p-6 md:p-10 border-black border-dotted">
+                    <h1 class="text-4xl sm:text-6xl lg:text-8xl font-bold text-center">PORTFOLIO</h1>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+                <img class="rounded-xl w-full h-auto object-cover aspect-square hover:scale-105 transition-transform duration-300" src="https://i.pinimg.com/736x/0a/a6/ad/0aa6ad965a2e31fb16bbc11facba9a2a.jpg" alt="SpaceX Rocket Launch">
+                <img class="rounded-xl w-full h-auto object-cover aspect-square hover:scale-105 transition-transform duration-300" src="https://i.pinimg.com/736x/19/1a/63/191a63017175eeb7adc28aff2777f130.jpg" alt="Tesla Model S">
+                <img class="rounded-xl w-full h-auto object-cover aspect-square hover:scale-105 transition-transform duration-300" src="https://i.pinimg.com/736x/5d/f3/1d/5df31d95bfa9f9c26b9ccd2df3782346.jpg" alt="Neuralink Concept">
+                <img class="rounded-xl w-full h-auto object-cover aspect-square hover:scale-105 transition-transform duration-300" src="https://i.pinimg.com/736x/71/c3/63/71c363024ece3a429905a5a6297f9a50.jpg" alt="Boring Company Tunnel">
+                </div>
+        </div>
+    </section>
+
+    <hr class="my-12 border-gray-300">
+
+    <section id="testimonial" class="py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
+       <div class="container mx-auto">
+            <div class="p-6 md:p-10 flex justify-center mb-10 md:mb-16">
+                <div class="border-2 p-6 md:p-10 border-black border-dotted">
+                    <h1 class="text-4xl sm:text-6xl lg:text-8xl font-bold text-center">TESTIMONIALS</h1>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+               <div class="bg-black rounded-3xl p-6 md:p-8 text-white shadow-lg">
+                 <h3 class="font-mono font-bold text-2xl mb-3">Mia K.</h3> <p class="text-base">"Working with the concepts Elon pioneers feels like stepping into the future. The dedication to innovation is palpable."</p>
+               </div>
+               <div class="bg-black rounded-3xl p-6 md:p-8 text-white shadow-lg">
+                 <h3 class="font-mono font-bold text-2xl mb-3">John D.</h3> <p class="text-base">"Tesla isn't just a car, it's a statement. Driving one changes your perspective on what transportation can be."</p>
+               </div>
+               <div class="bg-black rounded-3xl p-6 md:p-8 text-white shadow-lg">
+                 <h3 class="font-mono font-bold text-2xl mb-3">Sarah L.</h3> <p class="text-base">"Following SpaceX's journey is inspiring. Making humanity multiplanetary seemed like science fiction, now it feels inevitable."</p>
+               </div>
+               <div class="bg-black rounded-3xl p-6 md:p-8 text-white shadow-lg">
+                 <h3 class="font-mono font-bold text-2xl mb-3">Alex T.</h3> <p class="text-base">"The sheer ambition across all his ventures is incredible. It pushes the boundaries of what we think is possible."</p>
+               </div> </div>
+        </div>
+    </section>
+
+     <hr class="my-12 border-gray-300">
+
+    <section id="CONTACT" class="py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
+        <div class="container mx-auto">
+            <div class="p-6 md:p-10 flex justify-center mb-10 md:mb-16">
+                <div class="border-2 p-6 md:p-10 border-black border-dotted">
+                    <h1 class="text-4xl sm:text-6xl lg:text-8xl font-bold text-center">CONTACT</h1>
+                </div>
+            </div>
+            <div class="mt-6">
+                <div class="grid sm:grid-cols-2 items-start gap-12 p-8 mx-auto max-w-4xl bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md">
+                  <div>
+                    <h2 class="text-gray-900 text-3xl font-semibold">Let's Talk</h2> <p class="text-sm text-gray-500 mt-4 leading-relaxed">Have some big idea or brand to develop and need help? Then reach out we'd love to hear about your project and provide help.</p>
+
+                    <div class="mt-12">
+                      <h3 class="text-gray-900 text-base font-semibold">Email</h3> <ul class="mt-4">
+                        <li class="flex items-center">
+                          <div class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#007bff' viewBox="0 0 479.058 479.058">
+                              <path d="M434.146 59.882H44.912C20.146 59.882 0 80.028 0 104.794v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159L239.529 264.631 39.173 90.982a14.902 14.902 0 0 1 5.738-1.159zm0 299.411H44.912c-8.26 0-14.971-6.71-14.971-14.971V122.615l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z" data-original="#000000" />
+                            </svg>
+                          </div>
+                          <div class="ml-4"> <small class="block text-gray-900">Mail</small>
+                            <span class="text-blue-600 font-medium text-sm">info@example.com</span> </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="mt-12">
+                      <h3 class="text-gray-900 text-base font-semibold">Socials</h3> <ul class="flex mt-4 space-x-4">
+                        <li class="bg-[#e6e6e6cf] hover:bg-gray-300 h-10 w-10 rounded-full flex items-center justify-center shrink-0 transition duration-200">
+                           <a href="javascript:void(0)" aria-label="Facebook"> <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#007bff' viewBox="0 0 24 24"> <path d="M6.812 13.937H9.33v9.312c0 .414.335.75.75.75l4.007.001a.75.75 0 0 0 .75-.75v-9.312h2.387a.75.75 0 0 0 .744-.657l.498-4a.75.75 0 0 0-.744-.843h-2.885c.113-2.471-.435-3.202 1.172-3.202 1.088-.13 2.804.421 2.804-.75V.909a.75.75 0 0 0-.648-.743A26.926 26.926 0 0 0 15.071 0c-7.01 0-5.567 7.772-5.74 8.437H6.812a.75.75 0 0 0-.75.75v4c0 .414.336.75.75.75zm.75-3.999h2.518a.75.75 0 0 0 .75-.75V6.037c0-2.883 1.545-4.536 4.24-4.536.878 0 1.686.043 2.242.087v2.149c-.402.205-3.976-.884-3.976 2.697v2.755c0 .414.336.75.75.75h2.786l-.312 2.5h-2.474a.75.75 0 0 0-.75.75V22.5h-2.505v-9.312a.75.75 0 0 0-.75-.75H7.562z" data-original="#000000" /> </svg>
+                          </a>
+                        </li>
+                         <li class="bg-[#e6e6e6cf] hover:bg-gray-300 h-10 w-10 rounded-full flex items-center justify-center shrink-0 transition duration-200">
+                           <a href="javascript:void(0)" aria-label="LinkedIn"> <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#007bff' viewBox="0 0 511 512"> <path d="M111.898 160.664H15.5c-8.285 0-15 6.719-15 15V497c0 8.285 6.715 15 15 15h96.398c8.286 0 15-6.715 15-15V175.664c0-8.281-6.714-15-15-15zM96.898 482H30.5V190.664h66.398zM63.703 0C28.852 0 .5 28.352.5 63.195c0 34.852 28.352 63.2 63.203 63.2 34.848 0 63.195-28.352 63.195-63.2C126.898 28.352 98.551 0 63.703 0zm0 96.395c-18.308 0-33.203-14.891-33.203-33.2C30.5 44.891 45.395 30 63.703 30c18.305 0 33.195 14.89 33.195 33.195 0 18.309-14.89 33.2-33.195 33.2zm289.207 62.148c-22.8 0-45.273 5.496-65.398 15.777-.684-7.652-7.11-13.656-14.942-13.656h-96.406c-8.281 0-15 6.719-15 15V497c0 8.285 6.719 15 15 15h96.406c8.285 0 15-6.715 15-15V320.266c0-22.735 18.5-41.23 41.235-41.23 22.734 0 41.226 18.495 41.226 41.23V497c0 8.285 6.719 15 15 15h96.403c8.285 0 15-6.715 15-15V302.066c0-79.14-64.383-143.523-143.524-143.523zM466.434 482h-66.399V320.266c0-39.278-31.953-71.23-71.226-71.23-39.282 0-71.239 31.952-71.239 71.23V482h-66.402V190.664h66.402v11.082c0 5.77 3.309 11.027 8.512 13.524a15.01 15.01 0 0 0 15.875-1.82c20.313-16.294 44.852-24.907 70.953-24.907 62.598 0 113.524 50.926 113.524 113.523zm0 0" data-original="#000000" /> </svg>
+                          </a>
+                        </li>
+                         <li class="bg-[#e6e6e6cf] hover:bg-gray-300 h-10 w-10 rounded-full flex items-center justify-center shrink-0 transition duration-200">
+                           <a href="javascript:void(0)" aria-label="Instagram"> <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#007bff' viewBox="0 0 24 24"> <path d="M12 9.3a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4Zm0-1.8a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm5.85-.225a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0ZM12 4.8c-2.227 0-2.59.006-3.626.052-.706.034-1.18.128-1.618.299a2.59 2.59 0 0 0-.972.633 2.601 2.601 0 0 0-.634.972c-.17.44-.265.913-.298 1.618C4.805 9.367 4.8 9.714 4.8 12c0 2.227.006 2.59.052 3.626.034.705.128 1.18.298 1.617.153.392.333.674.632.972.303.303.585.484.972.633.445.172.918.267 1.62.3.993.047 1.34.052 3.626.052 2.227 0 2.59-.006 3.626-.052.704-.034 1.178-.128 1.617-.298.39-.152.674-.333.972-.632.304-.303.485-.585.634-.972.171-.444.266-.918.299-1.62.047-.993.052-1.34.052-3.626 0-2.227-.006-2.59-.052-3.626-.034-.704-.128-1.18-.299-1.618a2.619 2.619 0 0 0-.633-.972 2.595 2.595 0 0 0-.972-.634c-.44-.17-.914-.265-1.618-.298-.993-.047-1.34-.052-3.626-.052ZM12 3c2.445 0 2.75.009 3.71.054.958.045 1.61.195 2.185.419A4.388 4.388 0 0 1 19.49 4.51c.457.45.812.994 1.038 1.595.222.573.373 1.227.418 2.185.042.96.054 1.265.054 3.71 0 2.445-.009 2.75-.054 3.71-.045.958-.196 1.61-.419 2.185a4.395 4.395 0 0 1-1.037 1.595 4.44 4.44 0 0 1-1.595 1.038c-.573.222-1.227.373-2.185.418-.96.042-1.265.054-3.71.054-2.445 0-2.75-.009-3.71-.054-.958-.045-1.61-.196-2.185-.419A4.402 4.402 0 0 1 4.51 19.49a4.414 4.414 0 0 1-1.037-1.595c-.224-.573-.374-1.227-.419-2.185C3.012 14.75 3 14.445 3 12c0-2.445.009-2.75.054-3.71s.195-1.61.419-2.185A4.392 4.392 0 0 1 4.51 4.51c.45-.458.994-.812 1.595-1.037.574-.224 1.226-.374 2.185-.419C9.25 3.012 9.555 3 12 3Z"></path> </svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <form class="space-y-4">
+                    <input type='text' placeholder='Name' required class="w-full text-gray-900 rounded-md py-2.5 px-4 border border-gray-300 text-sm outline-none focus:border-blue-500 transition duration-200" />
+                    <input type='email' placeholder='Email' required class="w-full text-gray-900 rounded-md py-2.5 px-4 border border-gray-300 text-sm outline-none focus:border-blue-500 transition duration-200" />
+                    <input type='text' placeholder='Subject' required class="w-full text-gray-900 rounded-md py-2.5 px-4 border border-gray-300 text-sm outline-none focus:border-blue-500 transition duration-200" />
+                    <textarea placeholder='Message' rows="6" required class="w-full text-gray-900 rounded-md px-4 border border-gray-300 text-sm pt-2.5 outline-none focus:border-blue-500 transition duration-200"></textarea>
+                    <button type='submit' class="text-white bg-blue-500 hover:bg-blue-600 rounded-md text-[15px] font-medium px-4 py-2.5 w-full !mt-6 transition duration-200">Send Message</button>
+                  </form>
+                </div>
+             </div>
+        </div>
+    </section>
+
+   </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-8 mt-16"> <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-start">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <h2 class="text-2xl font-bold text-white">ELON MUSK</h2> <p class="mt-2 max-w-sm text-sm">Accelerating the future through sustainable energy, AI, and multiplanetary life.</p> </div>
+                <div class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-6 text-center">
+                    <a href="#home" class="hover:text-white transition duration-200">Home</a>
+                    <a href="#about" class="hover:text-white transition duration-200">About</a>
+                    <a href="#portfolio" class="hover:text-white transition duration-200">Portfolio</a>
+                    <a href="#testimonial" class="hover:text-white transition duration-200">Testimonials</a>
+                    <a href="#CONTACT" class="hover:text-white transition duration-200">Contact</a>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-4 text-center text-xs"> &copy; 2025 Elon Musk Portfolio (Conceptual). All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    </body>
+</html>
